@@ -1,0 +1,10 @@
+{
+  "name": "@dacio/yarn-lock-manipulation",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "license": "MIT",
+  "bin": "src/index.js",
+  "dependencies": {
+    "@yarnpkg/lockfile": "^1.1.0"
+  }
+}
