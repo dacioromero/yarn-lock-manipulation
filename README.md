@@ -16,11 +16,11 @@ Naive approach originally [posted in a yarn issue](https://github.com/yarnpkg/ya
 
     yarn-lock-manipulation remove-transitive path/to/yarn.lock paths to package jsons
 
-### regenerate-transitive
+### pick
 
-Attempt to fill missing entries of a lockfile, this attempts to "repair" what was done by `remove-transitive.js` as running `yarn install` after `remove-transitive.js` could upgrade non-transitive depedencies in rebuilding the lockfile.
+Generates a new yarn.lock with only entries releveant to a particular package.json. Potentially useful in CI/Docker where you don't want to install unneeded packages.
 
-    yarn-lock-manipulation regenerate-transitive path/to/yarn.lock path/to/package.json
+    yarn-lock-manipulation pick path/to/yarn.lock path/to/package.json
 
 
 ## Other works

@@ -2,7 +2,7 @@ const fs = require('fs')
 const lockfile = require('@yarnpkg/lockfile')
 const { execSync } = require('child_process')
 
-module.exports = function regenerateTransitive ([lockPath, packagePath]) {
+module.exports = function pick ([lockPath, packagePath]) {
   const packageObj = JSON.parse(fs.readFileSync(packagePath, 'utf8'))
   const lockObj = lockfile.parse(fs.readFileSync(lockPath, 'utf8')).object
 

@@ -3,7 +3,7 @@ const lockfile = require('@yarnpkg/lockfile')
 
 const merge = require('./merge')
 const removeTransitive = require('./remove-transitive')
-const regenerateTransitive = require('./regenerate-transitive')
+const pick = require('./pick')
 
 const [,, command, ...args] = process.argv
 
@@ -21,8 +21,8 @@ switch (command) {
   case 'remove-transitive':
     runCmd(removeTransitive, args)
     break
-  case 'regenerate-transitive':
-    runCmd(regenerateTransitive, args)
+  case 'pick':
+    runCmd(pick, args)
     break
   default:
     console.error('Invalid command')
